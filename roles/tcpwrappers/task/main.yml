@@ -1,0 +1,14 @@
+---
+tcpwrappers__enabled: True
+tcpwrappers__allow:
+  - daemon: 'sshd'
+    clients:
+      - '34.145.33.110' 
+tcpwrappers__localhost_allow:
+  - daemon: 'ALL'
+    client: [ '127.0.0.0/8', '::1/128' ]
+    comment: 'Access from localhost'
+    filename: 'allow_localhost'
+    weight: '06'
+tcpwrappers__deny_all: True
+

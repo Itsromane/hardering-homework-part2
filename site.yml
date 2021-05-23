@@ -1,0 +1,7 @@
+---
+
+- name: Manage TCP Wrappers
+  hosts: all
+  become: true
+  roles:
+    - tcpwrappers
