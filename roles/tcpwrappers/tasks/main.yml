@@ -1,0 +1,16 @@
+---
+
+- name: changed hosts.allow for access from workstation
+  lineinfile:
+    path: /etc/hosts.allow
+    line: "sshd:195.114.145.242"
+
+- name: changed hosts.allow for access from VM
+  lineinfile:
+    path: /etc/hosts.allow
+    line: "sshd:127.0.0.1" # i don`t know why
+
+- name: changed hosts.deny
+  lineinfile:
+    path: /etc/hosts.deny
+    line: 'ALL:ALL'

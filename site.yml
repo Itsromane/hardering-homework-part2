@@ -3,5 +3,6 @@
 - name: Manage TCP Wrappers
   hosts: all
   become: true
+  gather_facts: false
   roles:
     - tcpwrappers
